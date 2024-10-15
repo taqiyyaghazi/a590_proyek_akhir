@@ -5,7 +5,7 @@ Jaya Jaya Institut adalah institusi pendidikan perguruan yang telah beroperasi s
 
 ### Permasalahan Bisnis
 Berikut adalah permasalahan bisnis yang ingin diselesaikan oleh Jaya Jaya Institut:
-1. Tingkat Dropout yang Tinggi: Banyak siswa yang tidak menyelesaikan pendidikannya, yang berdampak negatif terhadap reputasi dan keberlanjutan institusi.
+1. Tingkat Dropout yang Tinggi: Banyak siswa yang tidak menyelesaikan pendidikannya, yang berdampak negatif terhadap reputasi dan keberlanjutan institusi sehingga perlu diketahui faktor-faktor yang mempengaruhi tingkat dropout.
 2. Kurangnya Deteksi Dini terhadap Siswa Berisiko: Saat ini, tidak ada mekanisme efektif untuk mendeteksi secara dini siswa yang berpotensi dropout, sehingga intervensi yang tepat waktu sulit dilakukan.
 
 ### Cakupan Proyek
@@ -24,10 +24,18 @@ jupyter-notebook .
 ```
 
 ## Business Dashboard
-Jelaskan tentang business dashboard yang telah dibuat. Jika ada, sertakan juga link untuk mengakses dashboard tersebut.
+Berdasarkan [Business Dashboard Student Performance](https://lookerstudio.google.com/reporting/ac1319b0-e91c-4102-bf68-5f094fae9690) dapat diambil beberapa informasi sebagai berikut:
+1. Dropout Rate Jaya Jaya Institut adalah 32,12%
+2. Rata-rata Admission Grade siswa yang dropout adalah 124,96
+3. Rata-rata Previous Qualification Grade siswa yang dropout adalah 131,11
+4. Ada 17.9% siswa dengan status enrolled yang masih potensial untuk dibantu hingga menjadi Graduated
+5. 32.2% siswa yang dropout memiliki masalah dalam biaya
+6. Siswa yang berstatus dropout mayoritas berusia 18-19 tahun saat pendaftaran
+7. Tiga Course tertinggi yang diambil siswa dropout adalah Management, Nursing, dan Journalism and Communication
+
 
 ## Menjalankan Sistem Machine Learning
-Jelaskan cara menjalankan protoype sistem machine learning yang telah dibuat. Selain itu, sertakan juga link untuk mengakses prototype tersebut.
+Untuk menjalankan sistem machine learning yang telah dibuat dapat mengikuti langkah-langkah sebagai berikut
 
 ```
 conda create --name student-performance-deploy python=3.9
@@ -36,10 +44,14 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
+atau dapat langsung mengakses prototype nya pada laman berikut [Student Performance Machine Learning](https://student-perform.streamlit.app/)
+
 ## Conclusion
-Jelaskan konklusi dari proyek yang dikerjakan.
+Berdasarkan dari analisis yang dilakukan dapat ditarik kesimpulan sebagai berikut:
+1. Tingkat Dropout siswa Jaya Jaya Institut tinggi yaitu 32.12%. Beberapa faktor yang paling mempengaruhi dropout tersebut adalah Curricular Unit (credited, enrolled, evaluations, approved, grade, without evaluations) di semester pertama dan kedua, Tuition fees up to date, Admission Grade, Age at Enrollment, Previous qualification grade, dan Course.
+2. Dari data student performance dapat dibangun model machine learning menggunakan Algoritma Random Forest dengan akurasi sebesar 74% sehingga dapat digunakan sebagai pendeteksi awal siswa yang berpotensi Dropout.
 
 ### Rekomendasi Action Items
-Berikan beberapa rekomendasi action items yang harus dilakukan perusahaan guna menyelesaikan permasalahan atau mencapai target mereka.
-- action item 1
-- action item 2
+Beberapa hal yang dapat dilakukan untuk mengurangin dropout rate adalah sebagai berikut:
+- Membantu siswa yang kesulitan dalam pembayaran karena cukup banyak siswa yang dropout mengalami kesulitan dalam pembayaran
+- Melakukan evaluasi terhadap course yang diambil oleh siswa yang dropout antara lain Management, Nursing, Journalism and Communication sehingga dapat diketahui apakah ada kendala dalam course tersebut yang menyebabkan siswa dropout 
